@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
+      crossorigin="anonymous"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div class="hero-section" id="hero">
+      <header>   
+       <nav class="navbar">
+        <ul class="navlist">
+          <li><a onClick="document.getElementById('hero').scrollIntoView();">HOME</a></li>
+          <li><a onClick="document.getElementById('projects').scrollIntoView();">PROJECTS</a></li>
+          <div class="underline"></div>
+        </ul>
+      </nav>
+    </header>
+      <div class="heading text">
+        <h1>Hello</h1>
+        <h2>I am a software developer</h2>
+      </div>
+      <button
+        class="cta-btn"
+        onClick="document.getElementById('projects').scrollIntoView();"
+      >See my work <i class="fas fa-arrow-down"></i>
+      </button>
+    </div>
+    <section class="projects" id="projects">
+        <div class="left-side proj1">
+          <div class="img-container">
+            <img src="project-1/amazon-logo.png" alt="" class="proj-1-img">
+          </div>
+        </div>
+        <div class="right-side proj1">
+          <h4>Amazon project</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio accusamus dicta repellendus quasi modi omnis provident, soluta dignissimos, porro sequi ea fuga quidem ut rerum?</p>
+        </div>
+    </section>
+      <h3 class="text heading"></h3>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="app.js" defer />
+  </body>
+</html>
