@@ -130,7 +130,7 @@ header {
 /* projects */
 .projects {
   min-height: 110vh;
-  background: #0d1321;
+  background-image: linear-gradient(to bottom, #0d1321, #cc7a60);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -199,7 +199,7 @@ form {
   background: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid #eee;
+  border-bottom: 3px solid #eee;
   color: #fff;
   font-size: 18px;
   margin-bottom: 16px;
@@ -220,7 +220,7 @@ input {
 }
 
 #status {
-  display: inline-block;
+  display: none;
   font-size: 16px;
   font-weight: 800;
   padding: 5px;
@@ -230,7 +230,7 @@ input {
 }
 
 .other__contact {
-  margin-top: 35px;
+  margin: 35px 0;
   min-width: 100vw;
   max-width: 100vw;
   display: flex;
@@ -241,12 +241,52 @@ input {
 .line {
   flex: 0.4;
   height: 3px;
-  background-color: #d2b48c;
+  background-color: #000;
 }
 
 .middle {
   flex: 0.2;
   font-size: 30px;
+}
+
+.contact-info > p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.contact-info > p > a {
+  color: #ff5722;
+}
+
+/* footer */
+footer {
+  background: #36374c;
+  height: 600px;
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.objective.subheading {
+  border-bottom: none;
+  font-weight: 500;
+}
+
+.icons {
+  margin-top: 40px;
+}
+
+.icons > a {
+  color: white;
+  opacity: 0.5;
+  font-size: 30px;
+  margin: 30px;
+  transition: all 0.4s ease;
+}
+
+.icons > a:hover {
+  opacity: 0.3;
 }
 
 /* keyframes */

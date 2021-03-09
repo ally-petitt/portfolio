@@ -10,6 +10,7 @@ window.addEventListener("DOMContentLoaded", function () {
   function success() {
     form.reset();
     button.style = "display: none ";
+    status.style.display = "inline-block";
     status.innerHTML = "Your message was delivered!";
   }
 
