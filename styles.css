@@ -7,21 +7,30 @@
   scroll-behavior: smooth;
 }
 
+html {
+  max-width: 100vw;
+}
+
 body {
   background-color: #333;
   min-height: 100vh;
+  width: 100%;
   font-family: Nunito, sans-serif;
   color: white;
+  overflow-x: hidden;
 }
 /* navbar */
 header {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 40px;
+  max-width: 100vw;
 }
 
 .navlist {
   display: flex;
+  position: relative;
+  top: 0;
 }
 
 .navlist > li {
@@ -55,7 +64,7 @@ header {
 
 /* hero section */
 .hero-section {
-  background-image: url("hero-background.jpg");
+  background-image: url("photos/hero-background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -112,29 +121,36 @@ header {
 
 /* projects */
 .projects {
-  min-height: 100vh;
+  min-height: 50vh;
   background: #0d1321;
   display: flex;
   align-items: center;
+  justify-content: space-around;
 }
 
 .img-container {
   height: 100vh;
-  width: 50vw;
+  max-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
-.proj-1-img {
-  position: absolute;
-  transform: scale(0.1);
-  transition: all 0.3s;
+.project-1 {
+  margin: 0 15px;
 }
 
-.proj-1-img.scaleUp {
-  transform: scale(1);
+.project-2 {
+  max-width: 350px;
+}
+
+.project-3 {
+  max-width: 300px;
+}
+
+.project-img {
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* keyframes */
@@ -180,5 +196,94 @@ header {
   }
   100% {
     right: 133px;
+  }
+}
+
+/* media queries */
+@media screen and (max-width: 1287px) {
+  .project-1 {
+    max-width: 400px;
+  }
+  .project-2 {
+    max-width: 300px;
+  }
+
+  .project-3 {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 1077px) {
+  .project-1 {
+    max-width: 350px;
+  }
+  .project-2 {
+    max-width: 250px;
+  }
+
+  .project-3 {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 986px) {
+  .project-1 {
+    max-width: 300px;
+  }
+  .project-2 {
+    max-width: 200px;
+  }
+
+  .project-3 {
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 746px) {
+  .project-1 {
+    max-width: 270px;
+  }
+  .project-2 {
+    max-width: 170px;
+  }
+
+  .project-3 {
+    max-width: 140px;
+  }
+}
+
+@media screen and (max-width: 714px) {
+  .project-1 {
+    max-width: 210px;
+  }
+  .project-2 {
+    max-width: 170px;
+  }
+
+  .project-3 {
+    max-width: 130px;
+  }
+}
+
+@media screen and (max-width: 642px) {
+  .img-container {
+    flex-direction: column;
+  }
+
+  .container-2 {
+    order: 2;
+  }
+
+  .container-1 {
+    order: 1;
+  }
+
+  .container-3 {
+    order: 3;
+  }
+
+  .project {
+    min-width: 70vw;
+    margin-top: 15px;
   }
 }
