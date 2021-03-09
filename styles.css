@@ -172,7 +172,81 @@ header {
 .contact-container {
   background-image: url(photos/contact-background.jpg);
   background-size: cover;
+  background-position: center;
   height: 800px;
+  text-align: center;
+}
+
+form {
+  margin-top: 50px;
+}
+
+.form-container {
+  transform: rotateX(90deg);
+}
+
+.form-container.flipDown {
+  transform-origin: 50% 0%;
+  animation: flipDown 1s forwards;
+}
+
+.contact.subheading {
+  margin-top: 80px;
+}
+
+.form-control {
+  width: 600px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #eee;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.submit {
+  margin-top: 10px;
+  border: none;
+  width: 250px;
+  padding: 10px 0;
+  background-color: #ff5722;
+  color: white;
+  font-weight: 600;
+}
+
+input {
+  height: 45px;
+}
+
+#status {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 5px;
+  background-color: rgb(165, 231, 165);
+  color: rgb(9, 172, 9);
+  border: rgb(9, 172, 9) 2px solid;
+}
+
+.other__contact {
+  margin-top: 35px;
+  min-width: 100vw;
+  max-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  flex: 0.4;
+  height: 3px;
+  background-color: #d2b48c;
+}
+
+.middle {
+  flex: 0.2;
+  font-size: 30px;
 }
 
 /* keyframes */

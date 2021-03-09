@@ -36,39 +36,47 @@
       </button>
     </div>
     <section class="projects" id="projects">
-          <h3 class="subheading">PROJECTS</h3>
-          <div class="img-container">
-            <div class="project-container container-2">
-              <div class="project project-2">
-                <img src="photos/todo-list.jpeg" alt="" class="project-img">
+        <h3 class="subheading">PROJECTS</h3>
+        <div class="img-container">
+          <div class="project-container container-2">
+            <div class="project project-2">
+              <img src="photos/todo-list.jpeg" alt="" class="project-img">
+            </div>
+          </div>
+            <div class="project-container container-1">
+              <div class="project project-1">
+              <img src="photos/amazon-logo.jpg" alt="" class="project-img">
+            </div>
+          </div>
+          <div class="project-container container-3">
+            <div class="project project-3">
+              <img src="photos/counting-music.jpg" alt="" class="project-img">
               </div>
-            </div>
-              <div class="project-container container-1">
-                <div class="project project-1">
-                <img src="photos/amazon-logo.jpg" alt="" class="project-img">
-              </div>
-            </div>
-            <div class="project-container container-3">
-              <div class="project project-3">
-                <img src="photos/counting-music.jpg" alt="" class="project-img">
-                </div>
-            </div>
-        </div>
+          </div>
+      </div>
     </section>
     <section class="contact" id="contact">
       <div class="contact-container">
-        <h3 class="subheading">CONTACT ME</h3>
-        <form>
-          
-        </form>
-        <h4>OTHER</h4>
+        <div class="form-container flipDown">
+          <h3 class="subheading contact">CONTACT ME</h3>
+          <form method="POST" id="contact-form" action="https://formspree.io/f/myybrkoq" class="flipDown">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required></input><br>
+            <input type="text" name="email" class="form-control" placeholder="Your Email" required></input><br>
+            <textarea name="message" class="form-control" placeholder="Message" rows="4" required ></textarea><br>
+            <button type="submit" id="submit-btn" class="form-control submit">SEND MESSAGE</button>
+          </form>
+        </div>
+        <p id="status"></p>
+        
+        <div class="other__contact">
+          <div class="line"></div><h4 class="middle">OTHER</h4><div class="line"></div>
+        </div>
         <p>Contact me through <a href="mailto:allypetitt@gmail.com">allypetitt@gmail.com</a></p>
         <p>Give me a call <a href="tel:6613422332">(661)342-2332</a></p>
       </div>
     </section>
-    </div>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="app.js" defer />
   </body>
 </html>
