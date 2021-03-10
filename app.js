@@ -9,7 +9,6 @@ function checkLocation() {
   checkHomeLocation();
   checkProjectsLocation();
   checkContactLocation();
-  console.log(underline.style.right);
 }
 
 function checkNavbarSize() {
@@ -43,7 +42,6 @@ function checkProjectsLocation() {
 function checkContactLocation() {
   const contact = document.querySelector("#contact");
   const verticalDistance = Math.abs(contact.getBoundingClientRect().top);
-  console.log(verticalDistance);
   if (verticalDistance <= 285) {
     if (navbarIsSmall == false) {
       underline.style.right = "32px";
@@ -53,42 +51,31 @@ function checkContactLocation() {
   }
 }
 
-// show different images for a small screen
-// document.addEventListener("DOMContentLoaded", () => {
-//   if (screen.width <= 707) {
-//     changeProjectPhotos();
-//   } else {
-//     restoreLargePhotos();
-//   }
-// });
+//trigger contact form and footer animation
+const form = document.querySelector(".form-container");
+window.onscroll = () => {
+  addFormAnimation();
+  addFooterAnimation();
+};
 
-// window.addEventListener("resize", () => {
-//   if (screen.width <= 707) {
-//     changeProjectPhotos();
-//   } else {
-//     restoreLargePhotos();
-//   }
-// });
+function addFormAnimation() {
+  let formPosition = form.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight;
 
-// let amazon = document.querySelector(".amazon-img");
-// let sudoku = document.querySelector(".sudoku-img");
-// let todo = document.querySelector(".todo-img");
-// let countingMusic = document.querySelector(".music-img");
+  if (formPosition < screenPosition / 1.3) {
+    form.classList.add("flipDown");
+  }
+}
 
-// function changeProjectPhotos() {
-//   redefineProjects();
-//   amazon.setAttribute("src", "photos/amazon-small.jpg");
-//   sudoku.setAttribute("src", "photos/sudoku-small.jpg");
-//   todo.setAttribute("src", "photos/todo-small.png");
-//   countingMusic.setAttribute("src", "photos/music-small.jpg");
-// }
+const pElement = document.querySelector("footer p");
+function addFooterAnimation() {
+  let pPosition = pElement.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight;
 
-// function restoreLargePhotos() {
-//   amazon.setAttribute("src", "photos/amazon-logo.png");
-//   sudoku.setAttribute("src", "photos/sudoku.jpg");
-//   todo.setAttribute("src", "photos/todo-list.jpeg");
-//   countingMusic.setAttribute("src", "photos/counting-music.jpg");
-// }
+  if (pPosition < screenPosition / 1.3) {
+    pElement.classList.add("fadeUp");
+  }
+}
 
 // contact form
 window.addEventListener("DOMContentLoaded", function () {
