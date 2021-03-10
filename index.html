@@ -39,8 +39,11 @@
       <h3 class="subheading">PROJECTS</h3>
       <div class="img-container">
         <div class="project project-3">
-          <img src="photos/todo-list.jpeg" alt="" class="project-img todo-img">
-            <a href="https://ally-petitt.github.io/Target-Todos/">
+          <picture class="project-img todo-img">
+            <source media="(max-width: 707px)" srcset="photos/todo-small.png">
+            <img src="photos/todo-list.jpeg" alt="amazon">
+          </picture>
+          <a href="https://ally-petitt.github.io/Target-Todos/">
             <div class="image-overlay">
               <h3>Target To-Do List</h3>
               <p>An intuitive way to prioritize the tasks that really matter</p>
@@ -48,7 +51,10 @@
           </a>
         </div>
             <div class="project project-1">
-            <img src="photos/amazon-logo.png" alt="" class="project-img amazon-img">
+            <picture class="project-img amazon-img">
+              <source media="(max-width: 707px)" srcset="photos/amazon-small.jpg">
+              <img src="photos/amazon-logo.png" alt="amazon">
+            </picture>
             <a href=" https://ally-petitt.github.io/amazon-clone">
               <div class="image-overlay amazon-overlay">
                 <h3>Amazon Clone</h3>
@@ -57,7 +63,10 @@
             </a>
           </div>
           <div class="project project-4">
-            <img src="photos/counting-music.jpg" alt="" class="project-img music-img">
+            <picture class="project-img music-img">
+              <source media="(max-width: 707px)" srcset="photos/music-small.jpg">
+              <img src="photos/counting-music.jpg" alt="music landing page">
+            </picture>
             <a href=" https://ally-petitt.github.io/Counting_music/">
               <div class="image-overlay">
                 <h3>Counting Music Remake</h3>
@@ -66,7 +75,10 @@
             </a>
           </div>
           <div class="project project-2">
-            <img src="photos/sudoku.jpg" alt="" class="project-img sudoku-img"></image>
+            <picture class="project-img sudoku-img">
+              <source media="(max-width: 707px)" srcset="photos/sudoku-small.jpg">
+              <img src="photos/sudoku.jpg" alt="sudoku solver">
+          </picture>
             <a href=" https://ally-petitt.github.io/sudoku-solver/">
               <div class="image-overlay">
                 <h3>COMING SOON</h3>
@@ -116,8 +128,6 @@
         </div>
       </div>
     </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-    <script src="app.js" defer />
+    <script src="app.js" defer ></script>
   </body>
 </html>
