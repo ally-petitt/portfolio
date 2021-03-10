@@ -1,3 +1,42 @@
+// header underline
+
+// show different images for a small screen
+document.addEventListener("DOMContentLoaded", () => {
+  if (screen.width <= 707) {
+    changeProjectPhotos();
+  } else {
+    restoreLargePhotos();
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (screen.width <= 707) {
+    changeProjectPhotos();
+  } else {
+    restoreLargePhotos();
+  }
+});
+
+const amazon = document.querySelector(".amazon-img");
+const sudoku = document.querySelector(".sudoku-img");
+const todo = document.querySelector(".todo-img");
+const countingMusic = document.querySelector(".music-img");
+
+function changeProjectPhotos() {
+  amazon.setAttribute("src", "photos/amazon-small.jpg");
+  sudoku.setAttribute("src", "photos/sudoku-small.jpg");
+  todo.setAttribute("src", "photos/todo-small.png");
+  countingMusic.setAttribute("src", "photos/music-small.jpg");
+}
+
+function restoreLargePhotos() {
+  amazon.setAttribute("src", "photos/amazon-logo.png");
+  sudoku.setAttribute("src", "photos/sudoku.jpg");
+  todo.setAttribute("src", "photos/todo-list.jpeg");
+  countingMusic.setAttribute("src", "photos/counting-music.jpg");
+}
+
+// contact form
 window.addEventListener("DOMContentLoaded", function () {
   // get the form elements defined in your form HTML above
 
