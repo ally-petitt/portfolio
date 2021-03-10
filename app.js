@@ -1,4 +1,57 @@
-// header underline
+// move navbar underline on scroll
+window.addEventListener("scroll", checkLocation);
+
+const underline = document.querySelector(".underline");
+let navbarIsSmall = false;
+
+function checkLocation() {
+  checkNavbarSize();
+  checkHomeLocation();
+  checkProjectsLocation();
+  checkContactLocation();
+  console.log(underline.style.right);
+}
+
+function checkNavbarSize() {
+  screen.width <= 576 ? (navbarIsSmall = true) : (navbarIsSmall = false);
+}
+
+function checkHomeLocation() {
+  const home = document.querySelector("#hero");
+  const verticalDistance = Math.abs(home.getBoundingClientRect().top);
+  if (verticalDistance <= 80) {
+    if (navbarIsSmall == false) {
+      underline.style.right = "230px";
+    } else {
+      console.log("small navbar");
+    }
+  }
+}
+
+function checkProjectsLocation() {
+  const projects = document.querySelector(".projects");
+  const verticalDistance = projects.getBoundingClientRect().top;
+  if (verticalDistance > -286 && verticalDistance < 500) {
+    if (navbarIsSmall == false) {
+      underline.style.right = "137px";
+    } else {
+      console.log("small navbar");
+    }
+  }
+}
+
+function checkContactLocation() {
+  const contact = document.querySelector("#contact");
+  const verticalDistance = Math.abs(contact.getBoundingClientRect().top);
+  console.log(verticalDistance);
+  if (verticalDistance <= 285) {
+    if (navbarIsSmall == false) {
+      underline.style.right = "32px";
+    } else {
+      console.log("small navbar");
+    }
+  }
+}
 
 // show different images for a small screen
 document.addEventListener("DOMContentLoaded", () => {
