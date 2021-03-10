@@ -354,6 +354,20 @@ footer {
   opacity: 0.3;
 }
 
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f8dea3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #abb2cf;
+}
+
 /* keyframes */
 @keyframes flipDown {
   0% {
