@@ -207,6 +207,7 @@ header {
   transform: translateY(20px);
   transition: transform 0.4s ease;
   color: white;
+  padding: 10px;
 }
 
 .image-overlay:hover > * {
@@ -317,6 +318,7 @@ input {
 .contact-info > p {
   margin-top: 10px;
   font-size: 20px;
+  padding: 0px 10px;
 }
 
 .contact-info > p > a {
