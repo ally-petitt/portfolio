@@ -1,5 +1,7 @@
 // move navbar underline on scroll
 window.addEventListener("scroll", checkLocation);
+//and make sure it is positioned from the start
+document.addEventListener("DOMContentLoaded", checkLocation);
 
 const underline = document.querySelector(".underline");
 let navbarIsSmall = false;
@@ -22,7 +24,7 @@ function checkHomeLocation() {
     if (navbarIsSmall == false) {
       underline.style.right = "230px";
     } else {
-      console.log("small navbar");
+      underline.style.right = "212px";
     }
   }
 }
@@ -34,7 +36,7 @@ function checkProjectsLocation() {
     if (navbarIsSmall == false) {
       underline.style.right = "137px";
     } else {
-      console.log("small navbar");
+      underline.style.right = "119px";
     }
   }
 }
@@ -46,7 +48,7 @@ function checkContactLocation() {
     if (navbarIsSmall == false) {
       underline.style.right = "32px";
     } else {
-      console.log("small navbar");
+      underline.style.right = "13px";
     }
   }
 }

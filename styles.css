@@ -17,7 +17,7 @@ body {
   width: 100%;
   font-family: Nunito, sans-serif;
   color: white;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 /* navbar */
 header {
@@ -453,9 +453,8 @@ footer p {
 }
 
 @media screen and (max-width: 576px) {
-  header {
-    right: 0;
-    text-align: center;
+  .navbar {
+    left: 50%;
   }
 
   .navlist {
@@ -466,6 +465,10 @@ footer p {
 @media screen and (max-width: 384px) {
   footer {
     padding: 30px;
+  }
+
+  .navlist {
+    display: none;
   }
 }
 
