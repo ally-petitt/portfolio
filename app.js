@@ -20,7 +20,7 @@ function checkNavbarSize() {
 function checkHomeLocation() {
   const home = document.querySelector("#hero");
   const verticalDistance = Math.abs(home.getBoundingClientRect().top);
-  if (verticalDistance <= 80) {
+  if (verticalDistance <= 80 || verticalDistance == 0) {
     if (navbarIsSmall == false) {
       underline.style.right = "230px";
     } else {
