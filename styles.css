@@ -235,6 +235,14 @@ header {
   order: 4;
 }
 
+.project-5 {
+  order: 5;
+}
+
+.project-6 {
+  order: 6;
+}
+
 /* contact form */
 .contact-container {
   background-image: url(photos/contact-background.jpg);
