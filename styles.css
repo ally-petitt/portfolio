@@ -204,6 +204,22 @@ header {
   background: #242f41;
 }
 
+.sudoku-overlay {
+  background: rgb(85, 92, 85);
+}
+
+.weather-overlay {
+  background: #417ba0;
+}
+
+.covid-overlay {
+  background: #9b2c37;
+}
+
+.angular-overlay {
+  background: #a98d48;
+}
+
 .image-overlay:hover {
   opacity: 1;
   transform: translateY(0deg);
