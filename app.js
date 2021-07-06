@@ -1,55 +1,52 @@
-// move navbar underline on scroll
-window.addEventListener("scroll", checkLocation);
 //and make sure it is positioned from the start
-document.addEventListener("DOMContentLoaded", checkLocation);
+document.addEventListener("DOMContentLoaded", ()=> document.addEventListener("scroll", moveUnderline));
 
 const underline = document.querySelector(".underline");
 let navbarIsSmall = false;
 
-function checkLocation() {
-  checkNavbarSize();
-  checkHomeLocation();
-  checkProjectsLocation();
-  checkContactLocation();
+function moveUnderline() {
+  const navItems = ["hero","projects", "skills", "experience", "contact"];
+  const underlineLocations = {
+    hero: "436px",
+    projects: "343px",
+    skills: "300px",
+    experience: "100px",
+    contact: "32px"
+  }
+
+  const currentSection = findSection(navItems);
+  if(currentSection) {
+    const underline = document.querySelector('.underline')
+    underline.style.right = underlineLocations[currentSection];
+  }
+
 }
 
-function checkNavbarSize() {
-  screen.width <= 576 ? (navbarIsSmall = true) : (navbarIsSmall = false);
-}
+// finds the section that the user is scrolling though
+function findSection(navItems) {
+  let elementsInViewport = [];
+  for(let i=0; i<navItems.length; i++) {
+    var el = document.getElementById(navItems[i]);
+    var top = el.offsetTop;
+    var height = el.offsetHeight;
 
-function checkHomeLocation() {
-  const home = document.querySelector("#hero");
-  const verticalDistance = Math.abs(home.getBoundingClientRect().top);
-  if (verticalDistance <= 80 || verticalDistance == 0) {
-    if (navbarIsSmall == false) {
-      underline.style.right = "230px";
-    } else {
-      underline.style.right = "212px";
+    while(el.offsetParent) {
+      el = el.offsetParent;
+      top += el.offsetTop;
+    }
+
+    if (top < (window.pageYOffset + window.innerHeight) &&
+      (top + height - window.innerHeight/2) > window.pageYOffset) {
+        elementsInViewport.push(navItems[i]);
+    }
+    
+    if (window.pageYOffset < window.innerHeight/2) {
+      return navItems[0]
     }
   }
-}
 
-function checkProjectsLocation() {
-  const projects = document.querySelector(".projects");
-  const verticalDistance = projects.getBoundingClientRect().top;
-  if (verticalDistance > -286 && verticalDistance < 500) {
-    if (navbarIsSmall == false) {
-      underline.style.right = "137px";
-    } else {
-      underline.style.right = "119px";
-    }
-  }
-}
-
-function checkContactLocation() {
-  const contact = document.querySelector("#contact");
-  const verticalDistance = Math.abs(contact.getBoundingClientRect().top);
-  if (verticalDistance <= 285) {
-    if (navbarIsSmall == false) {
-      underline.style.right = "32px";
-    } else {
-      underline.style.right = "13px";
-    }
+  if (elementsInViewport.length === 1) {
+    return elementsInViewport[0]
   }
 }
 
