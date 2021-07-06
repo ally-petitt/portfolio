@@ -9,8 +9,8 @@ function moveUnderline() {
   const underlineLocations = {
     hero: "436px",
     projects: "343px",
-    skills: "300px",
-    experience: "100px",
+    skills: "251px",
+    experience: "147px",
     contact: "32px"
   }
 
