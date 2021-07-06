@@ -504,7 +504,7 @@ input {
 /* footer */
 footer {
   background: #36374c;
-  height: 600px;
+  height: 440px;
   text-align: center;
   padding: 60px;
   font-size: 18px;
@@ -538,6 +538,12 @@ footer p {
 
 .fadeUp {
   animation: fadeUp 0.6s ease forwards;
+}
+
+.copyright {
+  margin-top: 20px;
+  font-size: 11px;
+  opacity: .8;
 }
 
 /* scrollbar */
@@ -691,11 +697,34 @@ footer p {
   .navlist {
     width: 270px;
   }
+
+  .tfg-img-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .tfg-logo {
+    object-fit:  contain !important;
+    width: 250px;
+  }
+
+  .experience .tfg-list {
+    column-count: 1;
+  }
 }
 
 @media screen and (max-width: 454px) {
   .projects {
     min-height: 1000px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .skills-list {
+    line-height: 2rem;
+    font-size: 18px;
   }
 }
 
@@ -706,6 +735,16 @@ footer p {
 
   .navlist {
     display: none;
+  }
+
+  .tfg-img-container {
+    width: 250px;
+    height: 250px;
+  }
+
+  .tfg-logo {
+    object-fit:  contain !important;
+    width: 200px;
   }
 }
 
