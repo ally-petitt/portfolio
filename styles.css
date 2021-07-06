@@ -271,6 +271,64 @@ section {
 /* skills */
 .skills {
   background-image: url("./photos/skills-background.jpg");
+  text-align: center;
+}
+
+.skills-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  min-height: initial;
+}
+
+.skills-list {
+  height: inherit;
+  min-height: inherit;
+  list-style-type: square;
+  margin: 25px 40px 45px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.skill-label {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: #bac9e2;
+  position: relative;
+  width: fit-content;
+  align-self: center;
+  transition: color .3s ease;
+}
+
+.skill-label::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  border-bottom: white 2px solid;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.skill-label:hover::after {
+  animation: draw-underline .4s forwards;
+}
+
+.skill-label:hover {
+  color: #d3d9e2;
+}
+
+.skill {
+  transition: all .5s ease;
+}
+
+.skill:hover {
+  color: #cc7856;
 }
 
 /* experience */
@@ -458,6 +516,21 @@ footer p {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@keyframes draw-underline {
+  0% {
+    opacity: 1;
+    border-bottom: transparent 2px solid;
+    transform: rotateY(90deg);
+    transform-origin: 0 0;
+  }
+
+  100% {
+    opacity: 1;
+    border-bottom: white 2px solid;
+    transform: rotateY(0deg)
   }
 }
 
