@@ -69,8 +69,6 @@ header {
 /* hero section */
 .hero-section {
   background-image: url("photos/hero-background.jpg");
-  background-size: cover;
-  background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
   color: white;
@@ -80,6 +78,11 @@ header {
   align-items: center;
   flex-direction: column;
   text-align: center;
+}
+
+section {
+  background-size: cover;
+  background-position: center;
 }
 
 .heading.text > h1 {
@@ -137,7 +140,8 @@ header {
 .projects {
   min-height: 1300px;
   padding: 40px 0;
-  background-image: linear-gradient(to bottom, #0d1321, #cc7a60);
+  background-image: linear-gradient(to bottom, #0d1321, 
+#a48cec);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -262,6 +266,16 @@ header {
 
 .project-6 {
   order: 6;
+}
+
+/* skills */
+.skills {
+  background-image: url("./photos/skills-background.jpg");
+}
+
+/* experience */
+.experience {
+  background-image: linear-gradient(to bottom, #2e2551, #cc7856)
 }
 
 /* contact form */
