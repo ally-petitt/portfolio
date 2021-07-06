@@ -123,3 +123,22 @@ function ajax(method, url, data, success, error) {
   };
   xhr.send(data);
 }
+
+
+// TFG logo reverse animation
+const tfgImgContainer = document.querySelector(".tfg-img-container")
+const tfgLogo = document.querySelector(".tfg-logo");
+const tfgDesc = document.querySelector(".tfg-desc")
+
+tfgImgContainer.addEventListener("mouseout", () => {
+  tfgLogo.classList.add("reverseFlipY")
+  tfgDesc.classList.remove("fadeUp")
+  tfgDesc.style.display = "none";
+  tfgLogo.style.display = "block";
+})
+tfgImgContainer.addEventListener("mouseover", () => {
+  tfgLogo.classList.remove("reverseFlipY")
+  tfgDesc.classList.add("fadeUp")
+    tfgDesc.style.display = "block";
+    tfgLogo.style.display = "none";
+})
